@@ -1,0 +1,8 @@
+{
+  "name": "Future Tech Store",
+  "app_id": "cb059468",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

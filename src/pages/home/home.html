@@ -1,0 +1,89 @@
+<ion-header>
+  <!-- <ion-toolbar color="secondary">
+    <img src="assets/img/wired-brain-coffee-logo.png" class="logo">
+  </ion-toolbar>
+
+  <ion-toolbar *ngIf="!loggedIn" color="secondary">
+    <button ion-button clear [navPush]="logPage">Sign In</button>
+  </ion-toolbar>
+
+  <ion-toolbar *ngIf="loggedIn" color="secondary">
+    <button ion-button icon-left outline clear small (click)="myPagePush(checkOut)">
+      <ion-icon name="cart"></ion-icon>
+      Checkout
+    </button>
+    <button ion-button icon-left clear small>
+      <ion-icon name="contact"></ion-icon>
+      {{loggedIn}} Logged in
+    </button>
+    <button ion-button icon-left outline clear small (click)="signOff()">
+      <ion-icon name="close-circle"></ion-icon>
+      Sign Out
+    </button>
+  </ion-toolbar> -->
+
+  <ion-navbar>
+    <ion-title>
+      <ion-icon name="home" color="primary"></ion-icon>
+      Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let product of products" (click)="viewItemDetails(product)">
+      <ion-avatar item-left>
+        <img src="{{product.images[0]}}">
+      </ion-avatar>
+      <h2>{{product.name}}</h2>
+      <div [ngSwitch]="product?.price_discount">
+        <p *ngSwitchCase="true">€
+          <span st>{{product.price}}</span>
+          <span>{{product.price_discount}}</span>
+        </p>
+        <p *ngSwitchDefault>€
+          <span style="text-decoration: line-through;">{{product.price}}</span>
+          <span>{{product.price_discount}}</span>
+        </p>
+        <button ion-button item-left (click)="shareProduct(product)">Share</button>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-row>
+    <ion-col col-9>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="newItem" placeholder="New Shopping item"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <button ion-button (click)="addItem()">Add!</button>
+    </ion-col>
+  </ion-row>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of shoppingItems | async">
+      <ion-item>
+        {{ item.$value }}
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button color="danger" icon-only (click)="removeItem(item.$key)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-card>
+
+    <ion-card-header>
+      Store Distance
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>{{distancekm}} - KM</p>
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

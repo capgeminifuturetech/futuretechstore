@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "620176656965",
+    "firebase_url": "https://futuretechstore-8951.firebaseio.com",
+    "project_id": "futuretechstore-8951",
+    "storage_bucket": "futuretechstore-8951.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620176656965:android:4c84ab6b253d7deb",
+        "android_client_info": {
+          "package_name": "com.futuretechstore.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "620176656965-958v7mot3ltop4hcmgvl524s8e54ici4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWXXQ3Qo59mNn7N0eMEBqy-NNICkd_9Ac"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

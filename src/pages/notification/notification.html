@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>
+      <ion-icon name="notifications" color="primary"></ion-icon>
+      Notifications</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item color="secondary" class="text-1x" tappable (click)="close()">
+      <ion-icon name="mail"></ion-icon>
+      Fresh stock arrival
+    </button>
+
+    <button ion-item class="text-1x" tappable (click)="close()">
+      <ion-icon name="mail-open" color="secondary"></ion-icon>
+      <span ion-text color="secondary">20% discounts on paints</span>
+    </button>
+    <button ion-item class="text-1x" tappable (click)="close()">
+      <ion-icon name="mail-open" color="secondary"></ion-icon>
+      <span ion-text color="secondary">40% discounts on arrow shirts</span>
+    </button>
+  </ion-list>
+</ion-content>
